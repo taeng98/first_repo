@@ -37,7 +37,42 @@
 ### Commit
 - 변경된 파일들을 저장하는 행위
 - 마치 사진을 찍듯이 기록한다 하여 'snapshot' 이라고도 함
+## Git 명렁어
 ### git init
 - 로컬 저장소 설정(초기화)
 - git의 버전 관리를 시작할 디렉토리에서 진행
 - 해당 폴더를 git으로 관리를 할 준비
+- .git/ 폴더가 생성됨
+- (master) 라는 문구가 생김
+### git add
+``` bash
+git add 파일명
+```
+- 변경사항이 있는 파일을 staging area에 추가
+- working directoy -> staging area
+### git commit
+``` bash
+git commit -m 'commit 메시지'
+```
+- staging area에 있는 파일들을 저장소에 기록
+- 해당 시점의 버전을 생성하고 변경 이력을 남기는 것
+- staging area -> working directory
+- 커밋을 적을 때 이력 내용을 남겨야함
+### git status
+- 빨간색 -> working dircetoy에 위치함
+- untracked files -> 한번도 관리하지 않음, 버전 이력이 없음
+### git log
+- commit 내역 확인
+### git commit 신분 등록
+```bash
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+### 정리
+git은 로컬 저장소 내 모든 파일의 **변경사항**을 감시하고 있다.
+
+## 실습
+### root 폴더
+- 시작 지점
+- '/' 로 시작하는 폴더 -> root 폴더에서 시작
+- 슬러시가 없는 경우 -> 현재 폴더
